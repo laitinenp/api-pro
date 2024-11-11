@@ -17,7 +17,8 @@ info:
 
 # 2) Apply the security globally to all operations
 security:
-  - bearerAuth: [] # use the same name as above
+  # - bearerAuth: [] # use the same name as above
+  - ApiKeyAuth: []
 
 servers:
   - url: http://localhost:3000
@@ -65,12 +66,14 @@ components:
           
         surname:
           type: string
-          examples: [ 
-            Fielding
-          ]
+          examples: [ Fielding ]
 
   securitySchemes:
     bearerAuth: # arbitrary name for the security scheme
       type: http
       scheme: bearer
       bearerFormat: JWT # optional, arbitrary value for documentation purposes
+    ApiKeyAuth: # arbitrary name for the security scheme
+      type: apiKey
+      in: header # can be "header", "query" or "cookie"
+      name: X-API-KEY # name of the header, query parameter or cookie
