@@ -7,7 +7,8 @@ var cors = require('cors')
 var indexRouter = require('./routes/index');
 var dataRouter = require('./routes/data');
 
-var swaggerUi = require('swagger-ui-express');	     // requires: npm install swagger-ui-express
+// NOTE referring to the following lines - in JavaScrit ES6 use: import xxx from yyy
+var swaggerUi = require('swagger-ui-express');	  // requires: npm install swagger-ui-express
 const YAML = require('yamljs'),	              // requires: npm install yamljs
       swaggerDocument = YAML.load('./openapi/api.yaml')
 
