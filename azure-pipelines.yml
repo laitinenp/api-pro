@@ -12,10 +12,10 @@ variables:
   azureSubscription: 'f7e96a72-b667-427b-a3fc-ebf3fe696e29'
 
   # Web app name
-  webAppName: 'api-pro'
+  webAppName: 'karelia-api-app'
 
   # Environment name
-  environmentName: 'api-pro'
+  environmentName: 'karelia-api-app'
 
   # Agent VM image name
   vmImageName: 'ubuntu-latest'
